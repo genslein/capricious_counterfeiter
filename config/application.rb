@@ -16,10 +16,21 @@ require "action_cable/engine"
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
 
+Dotenv::Railtie.load
+
+HOSTNAME = ENV['HOSTNAME']
+
 module CapriciousCounterfeiter
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 5.1
+
+    # Allowed options: :sql, :ruby.
+    config.sequel.schema_format = :sql
+
+    # Whether to dump the schema after successful migrations.
+    # Defaults to false in production and test, true otherwise.
+    config.sequel.schema_dump = true
 
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
