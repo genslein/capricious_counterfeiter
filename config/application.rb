@@ -33,7 +33,6 @@ module CapriciousCounterfeiter
     config.sequel.after_connect = proc do
       Sequel::Model.db.extension :pg_json
       Sequel::Model.db.extension :pg_hstore
-      Sequel::Model.plugin :timestamps, update_on_create: true
     end
 
     # Settings in config/environments/* take precedence over those specified here.
