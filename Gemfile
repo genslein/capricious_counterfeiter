@@ -11,13 +11,12 @@ ruby '2.5.0'
 gem 'rails', '~> 5.1.5'
 # Use Puma as the app server
 gem 'puma', '~> 3.7'
-gem 'dotenv'
-gem 'dotenv-rails', require: 'dotenv/rails-now'
 gem 'multi_json'
 gem 'pg'
 gem 'sequel'
-gem 'sequel_pg', require: 'sequel'
 gem 'sequel-rails'
+gem 'sequel-paranoid'
+gem 'sequel_pg', require: 'sequel'
 gem 'faker'
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
@@ -38,6 +37,8 @@ group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'rspec'
   gem 'rspec-rails'
+  gem 'timecop'
+  gem 'dotenv-rails'
 end
 
 group :development do
