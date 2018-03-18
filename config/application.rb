@@ -25,6 +25,7 @@ module CapriciousCounterfeiter
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 5.1
 
+    config.sequel.schema_format = :sql
     # Whether to dump the schema after successful migrations.
     # Defaults to false in production and test, true otherwise.
     config.sequel.schema_dump = false
@@ -32,6 +33,7 @@ module CapriciousCounterfeiter
     config.sequel.after_connect = proc do
       Sequel::Model.db.extension :pg_json
       Sequel::Model.db.extension :pg_hstore
+      Sequel::Model.plugin :timestamps, update_on_create: true
     end
 
     # Settings in config/environments/* take precedence over those specified here.
