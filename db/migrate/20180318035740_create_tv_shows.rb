@@ -3,7 +3,9 @@ Sequel.migration do
 
     create_table :tv_shows do
       primary_key :id
-    end
 
+      name :text
+
+    end
   end
 end
