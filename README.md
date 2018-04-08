@@ -1,24 +1,12 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a demo Rails API app currently only running worker processes that generates pseudo-random data using the 
+[faker gem](https://github.com/stympy/faker).
 
-Things you may want to cover:
+The worker processes are done with [sidekiq workers](https://github.com/mperham/sidekiq/wiki/Getting-Started#rails).
 
-* Ruby version
+The ORM of ActiveRecord has been replaced with the [sequel gem](https://github.com/jeremyevans/sequel)
+because it is what I am more familiar with day-to-day. The [sequel-rails gem](https://github.com/TalentBox/sequel-rails)
+give similar functionality for generating files as would the normal Rails-ActiveRecord integration.
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Test suite will use RSpec as development continues.
