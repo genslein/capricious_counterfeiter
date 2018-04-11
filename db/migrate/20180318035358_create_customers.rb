@@ -5,12 +5,9 @@ Sequel.migration do
     # https://github.com/stympy/faker/blob/master/doc/phone_number.md
     create_table :customers do
       primary_key :id
-
-      first_name :text
-      last_name :text
-
-      primary_phone_number :text
+      text :first_name
+      text :last_name
+      json :profile_metadata
     end
-
   end
 end

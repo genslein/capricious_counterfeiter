@@ -3,10 +3,8 @@ Sequel.migration do
 
     create_table :favorite_tv_shows do
       primary_key :id
-      customer_id :integer
-      tv_show_id :integer
-
-
+      integer :customer_id
+      integer :tv_show_id
     end
   end
 end

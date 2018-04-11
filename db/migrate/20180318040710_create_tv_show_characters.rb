@@ -1,12 +1,10 @@
 Sequel.migration do
   change do
-
-    create_table :tv_show_characters do
+    create_table :characters do
       primary_key :id
-      tv_show_id :integer
-      name :text
-
-      metadata :jsonb
+      integer :media_id
+      text :name
+      jsonb :metadata
     end
   end
 end

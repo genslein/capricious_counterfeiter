@@ -4,14 +4,15 @@ Sequel.migration do
     # https://github.com/stympy/faker/blob/master/doc/address.md
     create_table :addresses do
       primary_key :id
-      customer_id :integer
+      integer :customer_id
 
-      street_address :text
-      city :text
-      state :text
-      zip_code :text
-      country_code :text # country_code_long
+      text :street_address
+      text :city
+      text :state
+      text :zip_code
+      text :country_code # country_code_long
+
+      hstore :usage_metadata
     end
-
   end
 end
