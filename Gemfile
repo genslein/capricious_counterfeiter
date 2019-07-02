@@ -10,7 +10,7 @@ ruby '2.6.3'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.0.0.rc1'
 # Use Puma as the app server
-gem 'puma', '~> 3.7'
+gem 'puma', '~> 3.11'
 gem 'multi_json'
 gem 'pg'
 gem 'sequel'
@@ -36,6 +36,7 @@ gem 'sidekiq'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'pry'
   gem 'rspec'
   gem 'rspec-rails'
   gem 'timecop'
